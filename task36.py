@@ -24,10 +24,10 @@ def operation_table(oper, num_rows=6, num_columns=6):
     
     for i in range (1,num_rows+1):
         for j in range(1,num_columns+1):
-            res[i-1].append(i*j)
+            res[i-1].append(oper(i,j))
     return res
     
-resul=operation_table(8)
+resul=operation_table(lambda x,y:x*y)
 
 for i in range(len(resul)):
     print(resul[i])
